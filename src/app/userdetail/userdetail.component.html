@@ -1,0 +1,13 @@
+<div class="container">
+    <span class="card" *ngFor="let user of User;index as i">
+        <div class="content">
+            <span class="title"> name: </span> {{user.first_name}} {{user.last_name}}
+        </div>
+        <div class="content"> <span class="title"> email: </span> {{user.email}}</div>
+        <div class="content"> <span class="title"> Profile Picture: </span>
+            <img src={{user.avatar}} alt="">
+            <br>
+           
+        </div>
+    </span>
+</div>

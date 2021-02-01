@@ -1,0 +1,15 @@
+<button class="but" (click)="getusers()"> get</button>
+<div class="container">
+    <span class="card" *ngFor="let user of Users;index as i">
+        <div class="content">
+            <span class="title"> name: </span> {{user.first_name}} {{user.last_name}}
+        </div>
+        <div class="content"> <span class="title"> email: </span> {{user.email}}</div>
+        <div class="content"> <span class="title"> Profile Picture: </span>
+            <img src={{user.avatar}} alt="">
+            <br>
+            <button class="delete" (click)="deleteuser(user.id)">Delete</button>
+        <a [routerLink]="['/userdetail',user.id]"> <button class="edit">View</button></a>
+        </div>
+    </span>
+</div>
